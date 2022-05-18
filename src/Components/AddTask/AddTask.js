@@ -1,9 +1,10 @@
 import React from 'react';
+import InputPart from './InputPart';
 
 const AddTask = () => {
     return (
         <div>
-            <h1>add task</h1>
+            <InputPart></InputPart>
         </div>
     );
 };
