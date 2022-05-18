@@ -1,9 +1,11 @@
 import React from 'react';
+import Tasks from './Tasks';
 
 const ToDo = () => {
     return (
-        <div>
-            <h1>to do</h1>
+        <div className=''>
+            <h1 className='fs-bold text-5xl text-center p-[15px]'>THE TASK TO DO</h1>
+            <Tasks></Tasks>
         </div>
     );
 };

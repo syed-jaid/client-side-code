@@ -1,0 +1,17 @@
+.all-task-div {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+@media screen and (max-width: 600px) {
+    .all-task-div {
+        display: inline;
+        padding: 15px;
+    }
+
+    .text-neutral-content {
+        margin-top: 40px;
+    }
+}

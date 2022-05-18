@@ -14,7 +14,7 @@ const InputPart = () => {
         }
 
         // sending the  task data to the database
-        fetch('http://localhost:5000/addTask', {
+        fetch('http://localhost:5000/Task', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -35,9 +35,9 @@ const InputPart = () => {
     };
 
     return (
-        <div class="hero min-h-screen bg-base-200">
+        <div class="hero min-h-screen ">
             <div class="hero-content text-center">
-                <div class="card flex-shrink-0 w-[450px] max-w-sm shadow-2xl bg-base-100">
+                <div class="card flex-shrink-0 w-[450px] max-w-sm border-emerald-300 bg-base-200">
                     <form onSubmit={onSubmit}>
                         <div class="card-body">
                             <div class="form-control">
