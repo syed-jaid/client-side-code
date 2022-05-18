@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ToDo = () => {
+const AddTask = () => {
     return (
         <div>
-            <h1>to do</h1>
+            <h1>add task</h1>
         </div>
     );
 };
 
-export default ToDo;
+export default AddTask;
