@@ -1,8 +1,12 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
+import auth from '../../firebase.init';
 
 const InputPart = () => {
 
+    const user = useAuthState(auth)
+    console.log(user[0].email)
     // the add task at on submit 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -10,7 +14,8 @@ const InputPart = () => {
         //  user task info like name and Discription
         const userTask = {
             Name: e.target.tname.value,
-            Discription: e.target.Discription.value
+            Discription: e.target.Discription.value,
+            email: user[0].email
         }
 
         // sending the  task data to the database
