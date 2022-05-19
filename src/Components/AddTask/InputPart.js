@@ -19,7 +19,7 @@ const InputPart = () => {
         }
 
         // sending the  task data to the database
-        fetch('http://localhost:5000/Task', {
+        fetch('https://mighty-ravine-99930.herokuapp.com/Task', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -9,13 +9,13 @@ const Tasks = () => {
 
     const user = useAuthState(auth)
 
-    const { data: tasks, refetch } = useQuery('tasks', () => fetch(`http://localhost:5000/Task?email=${user[0]?.email}`)
+    const { data: tasks, refetch } = useQuery('tasks', () => fetch(`https://mighty-ravine-99930.herokuapp.com/Task?email=${user[0]?.email}`)
         .then(res => res.json()))
-
+    console.log(tasks)
     // delete the tesk 
     const TaskDelete = (props) => {
 
-        const url = `http://localhost:5000/Task/${props}`
+        const url = `https://mighty-ravine-99930.herokuapp.com/Task/${props}`
         fetch(url, {
             method: 'DELETE',
             headers: {
@@ -38,7 +38,7 @@ const Tasks = () => {
     //    after Complete the task 
     const CompleteTask = (props) => {
 
-        const url = `http://localhost:5000/Task/${props}`
+        const url = `https://mighty-ravine-99930.herokuapp.com/Task/${props}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -76,7 +76,6 @@ const Tasks = () => {
                     </div>
                 </div>)
             }
-
         </div>
     );
 };
